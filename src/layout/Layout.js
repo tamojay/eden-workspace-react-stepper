@@ -64,7 +64,7 @@ const Layout = () => {
             <img src={logoImg} alt="logo" />
          </section>
          <section className="row my-4">
-            <Stepper nonLinear activeStep={activeStep}>
+            <Stepper activeStep={activeStep}>
                {steps.map((label, index) => (
                   <Step key={label}>
                      <StepButton

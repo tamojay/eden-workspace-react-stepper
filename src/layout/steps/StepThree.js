@@ -20,7 +20,7 @@ const StepThree = () => {
          </span>
       </main>
       <section>
-         <div className="form-group d-flex justify-content-between my-3 step-three-card">
+         <div className="form-group my-3 step-three-card">
             <div className={`card mx-3 ${selected === 0 ? 'border-primary' : ''}`} onClick={() => handleCardSelect(0)}>
                <div className="card-body d-flex flex-column">
                   <span className="mt-2 mb-4">

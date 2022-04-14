@@ -21,7 +21,7 @@
 
 .layout {
   max-width: 25rem;
-  width: 40% !important;
+  width: 50% !important;
 }
 
 .main-title {
@@ -52,6 +52,28 @@
   font-size: 0.75rem;
 }
 
+.step-three-card {
+  display: flex;
+  justify-content: center;
+}
+
+/* Overriding CSS of the library */
+.MuiStepLabel-iconContainer {
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.MuiStepper-root {
+  padding: 0 1.25rem !important;
+}
+.MuiStepConnector-line {
+  display: block !important;
+  width: 100% !important;
+}
+
+.card {
+  cursor: pointer;
+  max-width: 14rem;
+}
 .card-accent {
   border-color: var(--accent);
   border-radius: 0.25rem;
@@ -68,11 +90,62 @@
   font-weight: bold;
 }
 
-@media only screen and (max-width: 660px) {
+@media only screen and (max-width: 1360px) and (min-width: 700px) {
+
+  .app-wrapper {
+    padding: 2rem 1.25rem;
+    background-color: var(--bg-col);
+  }
+  
+  .layout {
+    width: 100%;
+  }
+
+  .card {
+    width: 100%;
+  }
+
+  h5 {
+    font-size: 1.225rem;
+  }
+
+  .input-label, .input-field {
+    font-size: 0.525rem;
+  }
+
+  .main-title {
+    font-size: 1.625rem;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center !important;
+  }
+  
+  .sub-title {
+    font-size: 0.725rem;
+    font-weight: 500;
+    color: var(--sec-text);
+    text-align: left;
+  }
+
+  input {
+    width: 100%;
+  }
+  
+  .input-label, .input-field {
+    font-size: 0.725rem;
+  }
+}
+
+@media only screen and (max-width: 699px) {
   .step-three-card {
+    max-width: 12rem;
+    width: 100%;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    padding: auto 1rem;
+    flex-direction: column !important;
+    justify-content: flex-start !important;
+  }
+  
+  .input-label, .input-field {
+    font-size: 0.35rem;
   }
 }
