@@ -9,7 +9,7 @@ import StepThree from './steps/StepThree.js';
 import StepFour from './steps/StepFour.js';
 
 const getSteps = () => {
-   return ["", "", "", ""]
+   return ["", "", "", ""]  // without array of blank strings we can't map the array as it expect labels
 };
 
 const getStepContent = (step) => {
@@ -76,30 +76,20 @@ const Layout = () => {
                   </Step>
                ))}
             </Stepper>
-            <div>
-               {allStepsCompleted() ? (
-                  <div>
-                     <button className="button-accent border-0 rounded" onClick={handleReset}>
-                        Reset
-                     </button>
-                  </div>
-               ) : (
-                  <div>
-                     {getStepContent(activeStep)}
-                     {
-                        activeStep !== 3 ? (
-                           <div>
-                              <button className="button-accent border-0 rounded" onClick={handleNext}>
-                                 Create Workspace
-                              </button>
-                           </div>
-                        ) : (
-                           null
-                        )
-                     }
-                  </div>
-               )}
-            </div>
+               <div>
+                  {getStepContent(activeStep)}
+                  {
+                     activeStep !== 3 ? (
+                        <div>
+                           <button className="button-accent border-0 rounded" onClick={handleNext}>
+                              Create Workspace
+                           </button>
+                        </div>
+                     ) : (
+                        null
+                     )
+                  }
+               </div>
          </section>
       </div>
   )

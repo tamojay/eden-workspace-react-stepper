@@ -15,7 +15,7 @@
 }
 
 .app-wrapper {
-  padding: 4rem 3rem;
+  padding: 6rem 3rem;
   background-color: var(--bg-col);
 }
 
@@ -24,6 +24,7 @@
   width: 50% !important;
 }
 
+/* Main header and sub header */
 .main-title {
   font-size: 1.725rem;
   font-weight: 700;
@@ -36,6 +37,7 @@
   color: var(--sec-text);
 }
 
+/* Input fields and labels */
 .input-label, .input-field {
   font-size: 0.825rem;
 }
@@ -44,6 +46,7 @@
   font-weight: bold;
 }
 
+/* The button */
 .button-accent {
   background: var(--accent);
   color: var(--bg-col);
@@ -52,23 +55,10 @@
   font-size: 0.75rem;
 }
 
+/* Card in step three */
 .step-three-card {
   display: flex;
   justify-content: center;
-}
-
-/* Overriding CSS of the library */
-.app-wrapper .MuiStep-horizontal {
-  padding-left: 0;
-  padding-right: 0;
-}
-
-.MuiStepper-root {
-  padding: 0 1.25rem !important;
-}
-.MuiStepConnector-line {
-  display: block !important;
-  width: 100% !important;
 }
 
 .card {
@@ -91,6 +81,21 @@
   font-weight: bold;
 }
 
+/* Overriding CSS of the library */
+.app-wrapper .MuiStep-horizontal {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.MuiStepper-root {
+  padding: 0 1.25rem !important;
+}
+.MuiStepConnector-line {
+  display: block !important;
+  width: 100% !important;
+}
+
+/* for medium screen sizes */
 @media only screen and (max-width: 1360px) and (min-width: 601px) {
 
   .app-wrapper {
@@ -124,7 +129,6 @@
     font-size: 1.625rem;
     font-weight: 700;
     color: var(--text);
-    text-align: center !important;
   }
   
   .sub-title {
@@ -143,6 +147,7 @@
   }
 }
 
+/* For smallest cellular devices */
 @media only screen and (max-width: 600px) {
   .app-wrapper {
     padding: 1rem 0rem;
@@ -151,6 +156,20 @@
   .layout {
     width: 85% !important;
     max-width: 100%;
+  }
+
+  .main-title {
+    font-size: 1.325rem;
+    font-weight: 700;
+    color: var(--text);
+    text-align: center !important;
+  }
+  
+  .sub-title {
+    font-size: 0.65rem;
+    font-weight: 500;
+    color: var(--sec-text);
+    text-align: center !important;
   }
 
   .MuiStep-horizontal {
